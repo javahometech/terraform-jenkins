@@ -14,7 +14,7 @@ pipeline{
 
     stage('terraform init and apply - prod'){
       steps{
-        sh "sh returnStatus: true, script: 'terraform workspace new prod'"
+        sh "returnStatus: true, script: 'terraform workspace new prod'"
         sh "terraform init"
         sh "terraform apply -var-file=prod.tfvars -auto-approve"
       }
