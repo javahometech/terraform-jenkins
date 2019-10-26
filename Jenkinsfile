@@ -7,7 +7,7 @@ pipeline{
     stage('S3 - create bucket'){
       steps{
         script{
-          getTerraformPath('javahome-tf-1212')
+          createS3Bucket('javahome-tf-1212')
         }
       }
     }
