@@ -9,7 +9,7 @@
   tasks:
     - name: Run terraform scripts
       terraform:
-        project_path: .
+        project_path: "./"
         state: "{{ state }}"
         backend_config:
           region: "{{ region }}"
